@@ -1,4 +1,4 @@
-# SmartETL-DS + IA
+# SmartETL-DS
 
 Proyecto final integrador de Estructuras de Datos. Ingeniería de Software, Universidad Técnica de Ambato, FISEI. Docente: José Caiza. Lenguaje: Java. Modalidad: grupal.
 
