@@ -187,7 +187,9 @@ Ramas sugeridas: `feature/lista-enlazada`, `feature/lista-secuencial`, `feature/
 
 `src/pruebas/PruebasHito1.java` es un programa que no necesita librerías. Ejecuta 53 verificaciones sobre el lector CSV, las validaciones de carga, las dos listas y el Extract con los tres archivos reales (conteos exactos, campos vacíos, modos de carga, semilla y orden). Ejecutar `pruebas.PruebasHito1` desde la raíz del proyecto. Debe terminar con `fallaron: 0`.
 
-## 12. Planificación
+Para la defensa del hito frente al docente, consultar el guion paso a paso en `docs/GUION-DEMO.md`, que detalla el flujo de 5 minutos y las respuestas a las preguntas teóricas clave.
+
+## 11. Planificación
 
 | Fecha | Hito | Evidencia esperada |
 |---|---|---|
