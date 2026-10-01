@@ -3,6 +3,8 @@ out/
 .idea/*
 !.idea/modules.xml
 !.idea/encodings.xml
+!.idea/misc.xml
+!.idea/vcs.xml
 output/*
 !output/.gitkeep
 fuentes.txt
