@@ -1,0 +1,8 @@
+out/
+*.class
+.idea/*
+!.idea/modules.xml
+!.idea/encodings.xml
+output/*
+!output/.gitkeep
+fuentes.txt
