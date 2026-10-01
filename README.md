@@ -156,32 +156,44 @@ Todos: pruebas (`src/pruebas/`), integración y defensa. Cada integrante debe po
 
 ## 9. Flujo de trabajo con Git
 
-Una rama por funcionalidad y Pull Request para integrar. El historial es parte de la evidencia de colaboración.
+Se utilizó un flujo de trabajo basado en ramas por funcionalidad (*feature branches*) y Pull Requests para la integración en la rama principal `main`. Esto garantiza trazabilidad, evidencia de colaboración y revisión de código para cada integrante.
 
-**Commit inicial (líder), en `main`:** `.gitignore`, `SmartETL_DS.iml`, `.idea/modules.xml`, `.idea/encodings.xml`, `README.md`, `data/`, y los contratos `Lista.java`, `Criterio.java`, `ResultadoBusqueda.java`, `Registro.java` y `Mapeador.java`.
+Repositorio oficial: [https://github.com/juanchicoyunda1234/SmartETL_DS](https://github.com/juanchicoyunda1234/SmartETL_DS)
 
-```
-git init
-git branch -M main
-git add .gitignore SmartETL_DS.iml .idea README.md data
-git add src/estructuras/Lista.java src/estructuras/Criterio.java src/estructuras/ResultadoBusqueda.java
-git add src/model/Registro.java src/etl/Mapeador.java
-git commit -m "Estructura inicial, dataset OpenFlights y contratos"
-git remote add origin <URL_DEL_REPOSITORIO>
-git push -u origin main
-```
+### Pull Requests integrados en el Hito 1
 
-**Cada integrante, desde su propia cuenta:**
+| PR | Título | Rama | Responsable | Módulo / Archivos | Estado |
+|:---:|:---|:---|:---|:---|:---:|
+| [#1](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/1) | Commit de 'model' | `model` | Jeremy Torosina (`WinoSpop`) | `src/model/` (Aerolinea, Aeropuerto, Registro, Ruta) | **Merged** |
+| [#2](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/2) | Create PruebaHito1.java | `Prueba-AndresLlamuca` | Andrés Llamuca (`llamucaandres161-prog`) | `src/pruebas/` (PruebasHito1.java) | **Merged** |
+| [#3](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/3) | Creacion de Clases en etl con algo de Code | `Joseph-Rama-etl` | Joseph Romo (`wayusa25-cmyk`) | `src/etl/` (Extract, FuenteDatos, LectorCSV, Mapeador, ModoCarga, OpcionesCarga, ResultadoExtraccion) | **Merged** |
+| [#4](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/4) | Modulo de Interfaz de Usuario Swing (src/app) | `app-Noemi` | Noemí Tuza (`edithtuza15-collab`) | `src/app/` (Main, ModeloTablaRegistros, VentanaPrincipal) | **Merged** |
+| [#5](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/5) | Implementacion de estructuras de datos | `feature/estructuras` | Juan Carlos Chico (`juanchicoyunda1234`) | `src/estructuras/` (Lista, ListaEnlazada, ListaSecuencial, Nodo, Criterio, ResultadoBusqueda) | **Merged** |
+| [#6](https://github.com/juanchicoyunda1234/SmartETL_DS/pull/6) | Completar dataset OpenFlights, documentacion tecnica y guion de demo | `feature/dataset-y-documentacion` | Juan Carlos Chico (`juanchicoyunda1234`) | `data/` (airports, routes, airlines, FUENTE), `docs/GUION-DEMO.md`, `README.md`, `.gitignore`, `.idea/` | **Merged** |
 
-```
-git clone <URL_DEL_REPOSITORIO>
-git checkout -b feature/lista-enlazada
-git add src/estructuras/Nodo.java src/estructuras/ListaEnlazada.java
-git commit -m "Agrega Nodo y ListaEnlazada con head y tail"
-git push -u origin feature/lista-enlazada
-```
+### Procedimiento de colaboración
 
-Ramas sugeridas: `feature/lista-enlazada`, `feature/lista-secuencial`, `feature/extract`, `feature/modelo-y-datos`, `feature/ventana-swing`, `feature/documentacion`. Luego se abre un Pull Request hacia `main` y otro integrante lo revisa.
+1. **Clonado del repositorio central:**
+   ```bash
+   git clone https://github.com/juanchicoyunda1234/SmartETL_DS.git
+   cd SmartETL_DS
+   ```
+
+2. **Creación de rama de trabajo:**
+   ```bash
+   git checkout -b <nombre-de-rama>
+   ```
+
+3. **Desarrollo, commit y publicación de la rama:**
+   ```bash
+   git add <archivos-modificados>
+   git commit -m "Mensaje descriptivo del módulo o corrección"
+   git push -u origin <nombre-de-rama>
+   ```
+
+4. **Integración con Pull Request:**
+   Se abre el Pull Request en GitHub hacia `main`. Tras verificar que las pruebas compilatorias y unitarias pasen sin errores, el líder integra la rama mediante un commit de merge visible en el historial y en la gráfica de red de GitHub.
+
 
 ## 10. Pruebas
 
