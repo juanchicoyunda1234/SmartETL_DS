@@ -1,0 +1,13 @@
+Fuente de los datos: OpenFlights (https://openflights.org/data.html)
+Repositorio original: https://github.com/jpatokal/openflights (carpeta data)
+Descarga realizada el 30 de septiembre de 2026.
+
+Los archivos originales se llaman airports.dat, routes.dat y airlines.dat y tienen formato CSV
+(valores separados por comas, sin fila de encabezados, nulos marcados como \N).
+Se renombraron a .csv sin modificar su contenido.
+
+airports.csv: 7698 filas, 14 campos
+routes.csv:   67663 filas, 9 campos
+airlines.csv: 6162 filas, 8 campos
+
+Antes de redistribuir los datos, revisar los terminos de licencia en el repositorio original.
